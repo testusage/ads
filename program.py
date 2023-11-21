@@ -1,3 +1,16 @@
+def func(list1):
+    for i in range(len(list1) - 1):
+        for j in range(len(list1) - 1 - i):  # Fixing the inner loop range
+            if list1[j] > list1[j + 1]:
+                temp = list1[j]
+                list1[j] = list1[j + 1]
+                list1[j + 1] = temp
+    return list1
+
+list1 = [5, 3, 6, 1, 7]
+func(list1)
+print(list1)  # If you want to print the sorted list
+#-------------------------------------
 def is_prime(number):
     if number <= 1:
         return False
